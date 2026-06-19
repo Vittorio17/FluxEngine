@@ -66,9 +66,8 @@ To achieve metropolitan-scale simulations, FluxEngine entirely abandons traditio
 * **Parallel Pathfinding & Topology Management:** The most computationally expensive phase—calculating shortest paths via Dijkstra algorithms across massive real-world graphs—is distributed across a parallelized worker architecture. This completely bypasses Python's Global Interpreter Lock (GIL), allowing route generation to scale linearly with available CPU cores. When users place interactive barriers, the system dynamically severs NetworkX graph edges and safely reroutes the fleet without breaking the simulation loop.
 * **Asynchronous API & I/O Decoupling:** Built on top of FastAPI, the computational engine operates completely decoupled from the visualization layer. The core mathematical thread processes state updates in the background, while the API handles incoming requests by extracting lightweight, serialized JSON "snapshots" of the `pos_matrix` on demand. This ensures the heavy simulation loop is never bottlenecked by network I/O or client rendering limits.
 
- **[Read the comprehensive Architecture Documentation →](docs/Architecture.md)**
+**[Read the comprehensive Architecture Documentation →](docs/Architecture.md)**
 
----
 
 ## Performance & Scalability Boundaries
 
@@ -87,12 +86,6 @@ Below are the results of the **Physical Breaking Point Stress Test** conducted o
 
 **[Explore the detailed Performance Benchmarks & Stress Tests →](docs/Performance.md)**
 
-Hai perfettamente ragione. Nei progetti infrastrutturali complessi, dare per scontati i passaggi è l'errore più comune. Una documentazione iper-dettagliata riduce a zero la frustrazione di chi clona il repository e previene l'apertura di *Issue* inutili su GitHub.
-
-Visto che abbiamo pacchettizzato tutto alla perfezione (incluso il Container Registry), possiamo creare una guida "a prova di bomba" che spieghi non solo *cosa* digitare, ma anche *perché* farlo e *cosa aspettarsi*.
-
-Ecco una versione estesa, granulare e professionale per il tuo `README.md`. Puoi sostituire il blocco precedente con questo:
-
 
 ## Quick Start & Usage Guide
 
@@ -110,7 +103,7 @@ Requires [Docker](https://www.docker.com/).
 
 1. Open your terminal and run:
 ```bash
-docker run -d -p 8000:8000 ghcr.io/vittorio17/trafficsimulator:latest
+   docker run -d -p 8000:8000 ghcr.io/vittorio17/fluxengine:latest
 
 ```
 
@@ -121,19 +114,19 @@ docker run -d -p 8000:8000 ghcr.io/vittorio17/trafficsimulator:latest
 If you cloned the repository and want to run the isolated environment with hot-reloading enabled.
 
 1. Clone the repository and navigate into it:
+
 ```bash
-git clone [https://github.com/vittorio17/TrafficSimulator.git](https://github.com/vittorio17/TrafficSimulator.git)
-cd TrafficSimulator
+   git clone [https://github.com/vittorio17/FluxEngine.git](https://github.com/vittorio17/FluxEngine.git)
+   cd FluxEngine
 
 ```
-
 
 2. Build and spin up the container:
+
 ```bash
-docker-compose up -d --build
+   docker-compose up -d --build
 
 ```
-
 
 *Note: The `-d` flag runs the server in detached mode. To view the engine logs in real-time, use `docker-compose logs -f`.*
 
@@ -142,27 +135,26 @@ docker-compose up -d --build
 If you want to actively develop the DOD engine or the API. This method requires the ultra-fast [uv](https://github.com/astral-sh/uv) package manager.
 
 1. Clone the repository:
+
 ```bash
-git clone [https://github.com/vittorio17/TrafficSimulator.git](https://github.com/vittorio17/TrafficSimulator.git)
-cd TrafficSimulator
+  git clone [https://github.com/vittorio17/FluxEngine.git](https://github.com/vittorio17/FluxEngine.git)
+  cd FluxEngine
 
 ```
-
 
 2. Sync the environment (this instantly installs all exact dependencies from `uv.lock`, including NumPy and SciPy):
+
 ```bash
-uv sync
+  uv sync
 
 ```
-
 
 3. Boot the FastAPI server:
+
 ```bash
-uv run uvicorn main:app --host 0.0.0.0 --port 8000
+  uv run uvicorn main:app --host 0.0.0.0 --port 8000
 
 ```
-
-
 
 ---
 
@@ -171,11 +163,10 @@ uv run uvicorn main:app --host 0.0.0.0 --port 8000
 Regardless of the method chosen, the FastAPI backend will automatically generate interactive documentation based on the OpenAPI standard.
 
 Open your browser and navigate to:
-👉 **[http://localhost:8000/docs](https://www.google.com/search?q=http://localhost:8000/docs)**
+**[http://localhost:8000/docs](http://localhost:8000/docs)**
 
 Here you can directly test the endpoints (`/build`, `/populate`, `/step`) and inspect the Pydantic data schemas without needing external tools like Postman.
 
----
 
 ### Step 3: Launch the Visual Interface (Frontend)
 
