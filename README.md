@@ -3,15 +3,21 @@
 </h1>
 <h4 align="center">Large-Scale Urban Mobility Engine</h4>
 
+<div align="center">
+<br>
+<!-- All Badges Grouped Together with Rounded Corners -->
+<a href="https://github.com/vittorio17/FluxEngine/actions"><img src="https://img.shields.io/github/actions/workflow/status/vittorio17/FluxEngine/docker-publish.yml?style=flat&logo=github&color=24292e" alt="Build Status" height="22"></a>
+<a href="https://github.com/vittorio17/FluxEngine/pkgs/container/fluxengine"><img src="https://img.shields.io/badge/GHCR-published-2496ED?style=flat&logo=docker&logoColor=white" alt="GHCR Registry" height="22"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-darkgreen?style=flat" alt="License: MIT" height="22"></a>
+<br>
+<img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white" alt="Python" height="22">
+<img src="https://img.shields.io/badge/FastAPI-v0.100+-009688?style=flat&logo=fastapi&logoColor=white" alt="FastAPI" height="22">
+<img src="https://img.shields.io/badge/NumPy-DOD_Memory-013243?style=flat&logo=numpy&logoColor=white" alt="NumPy" height="22">
+<img src="https://img.shields.io/badge/OSMnx-Map_Data-4CAF50?style=flat&logo=openstreetmap&logoColor=white" alt="OSMnx" height="22">
+</div>
+<br/>
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.9+-blue.svg" alt="Python 3.9+">
-  <img src="https://img.shields.io/badge/FastAPI-005571?logo=fastapi&logoColor=white" alt="FastAPI">
-  <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy">
-  <img src="https://img.shields.io/badge/OSMnx-Map_Data-success" alt="OSMnx">
-</p>
-
-<p align="center">
-  <i>A Data-Oriented urban traffic simulator built to model the structural impact of road networks on metropolitan-scale populations.</i>
+  <b><i>A Data-Oriented urban traffic simulator built to model the structural impact of road networks on metropolitan-scale populations.</i></b>
 </p>
 
 <br>
