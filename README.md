@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="immagini/logo.svg" alt="FluxEngine Logo" width="32" height="32" style="vertical-align: middle;"> FluxEngine
+  <img src="img/icon-svg.svg" alt="FluxEngine Logo" width="32" height="32" style="vertical-align: middle;"> FluxEngine
 </h1>
 <h4 align="center">Large-Scale Urban Mobility Engine</h4>
 
